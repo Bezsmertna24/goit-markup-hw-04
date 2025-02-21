@@ -506,9 +506,11 @@ margin-right: 120px;
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .footer-item-icons {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
@@ -517,6 +519,10 @@ margin-right: 120px;
 .footer-icons-list {
     width: 40px;
     height: 40px;
+}
+
+.footer-image {
+    fill: #f4f4fd;
 }
 
 .footer-links {
