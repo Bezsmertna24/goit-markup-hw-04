@@ -25,9 +25,9 @@ body {
 }
 
 img {
-    display: block;
-     max-width: 100%;
-      height: auto;
+display: block;
+max-width: 100%;
+height: auto;
 }
 /* стилі header */
 .page-header {
@@ -90,6 +90,22 @@ border-bottom:1px solid #e7e9fc;
 
 /* nav */
 
+.navigation-link.current{
+    position: relative;
+    color: #404bbf;
+}
+
+.navigation-link.current::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color:#404bbf;
+    border-radius: 2px;
+}
+
 .navigation-link {
     font-weight: 500;
     font-size: 16px;
@@ -99,6 +115,7 @@ border-bottom:1px solid #e7e9fc;
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
@@ -121,6 +138,7 @@ border-bottom:1px solid #e7e9fc;
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .contacts-link:hover,
@@ -133,6 +151,12 @@ border-bottom:1px solid #e7e9fc;
 .hero-section {
     background-color: #2e2f42;
     padding: 188px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+    url(/images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-title {
@@ -165,6 +189,7 @@ button {
     margin: 0 auto;
     min-width: 169px;
     border: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -200,6 +225,18 @@ button {
     margin-bottom: 8px;
 }
 
+.icons-adventages {
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
 .advantages-subtitle {
     font-weight: 500;
     font-size: 20px;
@@ -232,6 +269,8 @@ button {
 
 .team {
     background-color: #f4f4fd;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .title-team {
@@ -256,6 +295,39 @@ button {
     align-items: center;
     gap: 24px;
 }
+
+.icon-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons-list-contscts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.icons-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icons-links:hover,
+.icons-links:focus {
+background-color: #404bbf;
+}
+
+
 
 .characteristic-team {
     background-color: #fff;
@@ -332,6 +404,34 @@ padding: 32px 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+}
+
+
+.box {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+     position: absolute;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+    padding-top: 40px;
+    padding-right: 32px;
+    padding-left: 32px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.portfolio-item-list:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 
